@@ -1,0 +1,13 @@
+Coloque aqui os arquivos de logo do cliente:
+
+- logo-horizontal.png  -> logo completa (usada no topo da página)
+- icon.png             -> só o ícone/símbolo (usado como favicon)
+
+Os nomes dos arquivos devem ser exatamente esses, ou você pode mudar o
+caminho no index.html (procure por "assets/").
+
+IMPORTANTE: o fundo da página é ESCURO (tema dark). Use uma versão do logo
+com texto em cor CLARA (branco), senão o nome do cliente fica invisível
+sobre o fundo escuro. Se você só tiver a versão do logo com texto escuro
+(para fundo claro), peça pro designer uma variante clara, ou recolora o
+texto para branco em um editor de imagem antes de usar aqui.
