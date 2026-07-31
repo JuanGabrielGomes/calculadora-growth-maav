@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/clientes/maav-hub/index.html" },
+    { "source": "/:path*", "destination": "/clientes/maav-hub/:path*" }
+  ]
+}
