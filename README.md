@@ -64,11 +64,26 @@ servidor.
 - **Cores e fonte** → topo do `style.css`, bloco `:root { ... }`.
 - **Textos da página** → direto nas tags do `index.html`.
 - **Logo** → arquivos em `assets/`.
-- **WhatsApp e capacidade de SDR/Closer** → bloco `CONFIG` no topo do
-  `script.js`.
+- **Link do botão (CTA) e capacidade de SDR/Closer** → bloco `CONFIG` no topo
+  do `script.js`.
 - **Valores iniciais dos sliders** (o que aparece ao abrir a página) → objeto
   `state` no `script.js`, e os atributos `value`/`min`/`max`/`step` de cada
   `<input type="range">` no `index.html` (mantenha os dois sincronizados).
+
+## Google Tag Manager (ou outra tag de rastreamento)
+
+Não precisa saber programar. Dentro do `index.html` de cada cliente tem duas
+áreas já marcadas com comentários `GOOGLE TAG MANAGER`:
+
+1. Uma logo antes de `</head>` — cole ali o **primeiro** trecho de código que
+   o Google Tag Manager te dá na tela "Instalar Google Tag Manager" (a caixa
+   de cima, que começa com `<script>`).
+2. Uma logo depois de `<body>` — cole ali o **segundo** trecho (a caixa de
+   baixo, que começa com `<noscript>`).
+
+Copiar e colar os dois trechos exatamente como o próprio Google Tag Manager
+mostra é suficiente — não precisa editar nada dentro deles. Se não for usar
+GTM, é só deixar essas duas áreas em branco, elas não afetam a calculadora.
 
 ## Criar a calculadora de um novo cliente
 
