@@ -93,9 +93,9 @@
             </div>
           </div>
           <div class="slider-hints">
-            <span class="slider-hint"><strong>≤ 3%</strong>abaixo da média</span>
-            <span class="slider-hint"><strong>4-6%</strong>na média</span>
-            <span class="slider-hint"><strong>≥ 7%</strong>acima da média</span>
+            <span class="slider-hint"><strong>&lt; 6%</strong>abaixo da média</span>
+            <span class="slider-hint"><strong>7-15%</strong>na média</span>
+            <span class="slider-hint"><strong>&gt; 16%</strong>acima da média</span>
           </div>
         </div>
 
@@ -134,7 +134,7 @@
               <input type="range" class="slider-input" id="rangeTaxaConv" min="1" max="100" step="1" value="48">
             </div>
           </div>
-          <p class="slider-hints"><span class="slider-hint">Média entre 30% e 60%</span></p>
+          <p class="slider-hints"><span class="slider-hint">Média entre 25% e 60%</span></p>
         </div>
 
         <!-- TICKET MÉDIO -->
@@ -150,10 +150,10 @@
             <div class="slider-tooltip" id="tooltipTicketMedio"></div>
             <div class="slider-track">
               <div class="slider-fill" id="fillTicketMedio"></div>
-              <input type="range" class="slider-input" id="rangeTicketMedio" min="1000" max="500000" step="1000" value="60000">
+              <input type="range" class="slider-input" id="rangeTicketMedio" min="100" max="500000" step="100" value="60000">
             </div>
           </div>
-          <div class="slider-minmax"><span>R$ 1.000</span><span>R$ 500.000</span></div>
+          <div class="slider-minmax"><span>R$ 100</span><span>R$ 500.000</span></div>
         </div>
 
       </div>
@@ -195,13 +195,13 @@
           <div class="r-card">
             <div class="card-label">Número de SDRs</div>
             <div class="value-display"><span id="sdrsRes">–</span></div>
-            <p class="note">220 MQLs/mês por SDR</p>
+            <p class="note" id="sdrCapacityNote"></p>
           </div>
 
           <div class="r-card">
             <div class="card-label">Número de Closers</div>
             <div class="value-display"><span id="closersRes">–</span></div>
-            <p class="note">80 oportunidades/mês por Closer</p>
+            <p class="note" id="closerCapacityNote"></p>
           </div>
         </div>
       </div>

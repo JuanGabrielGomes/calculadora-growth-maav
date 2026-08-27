@@ -6,17 +6,18 @@
 // ============================================================================
 const CONFIG = {
   // Capacidade produtiva do time comercial (quantas pessoas são necessárias)
-  capacidadeMqlPorSdrMes: 220,        // 10 MQLs/dia x 22 dias úteis
-  capacidadeOportunidadePorCloserMes: 80, // 4 oportunidades/dia x 20 dias úteis
+  capacidadeMqlPorSdrMes: 440,        // MQLs que 1 SDR consegue trabalhar por mês
+  capacidadeOportunidadePorCloserMes: 80, // oportunidades que 1 Closer consegue atender por mês
 
-  whatsappNumero: "5500000000000", // DDI + DDD + número, só dígitos
-  whatsappMensagem: "Olá, vi a calculadora de growth da Maav Hub e quero entender meu potencial de faturamento",
+  // Link do botão "CONVERSAR COM A MAAV HUB"
+  ctaUrl: "https://app.maavhub.com.br/widget/survey/qeMVFbrrjXCg5gPyIQaN",
 };
 // ============================================================================
 
 document.addEventListener("DOMContentLoaded", () => {
-  const ctaWhatsapp = document.getElementById("cta-whatsapp");
-  ctaWhatsapp.href = `https://wa.me/${CONFIG.whatsappNumero}?text=${encodeURIComponent(CONFIG.whatsappMensagem)}`;
+  document.getElementById("cta-whatsapp").href = CONFIG.ctaUrl;
+  document.getElementById("sdrCapacityNote").textContent = `${CONFIG.capacidadeMqlPorSdrMes} MQLs/mês por SDR`;
+  document.getElementById("closerCapacityNote").textContent = `${CONFIG.capacidadeOportunidadePorCloserMes} oportunidades/mês por Closer`;
 
   const state = {
     investimento: 10000,
