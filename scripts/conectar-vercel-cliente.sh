@@ -189,7 +189,10 @@ finish() {
 # ──────────────────────────────────────────────────────────────────────────
 
 TOTAL_STAGES=7
-ENV_FILE="${ENV_FILE:-scripts/conectar-vercel-cliente.env}"
+# Força o arquivo de estado do wizard pra dentro de scripts/, mesmo a
+# biblioteca acima já tendo aplicado o padrão ".env" (por isso não usamos
+# "${ENV_FILE:-...}" aqui — nesse ponto ENV_FILE já não está mais vazio).
+ENV_FILE="scripts/conectar-vercel-cliente.env"
 
 banner "Conectar calculadora-growth-maav na Vercel do cliente"
 
