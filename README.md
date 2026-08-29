@@ -89,9 +89,20 @@ GTM, é só deixar essas duas áreas em branco, elas não afetam a calculadora.
 
 1. Copie `clientes/_modelo` inteira e renomeie (ex: `clientes/consori`).
 2. Coloque os logos em `clientes/consori/assets/`.
-3. Ajuste `style.css` (cores), `index.html` (textos) e `script.js`
-   (WhatsApp, capacidade de SDR/Closer e valores padrão) para a realidade
-   desse cliente.
+3. Ajuste `style.css` (cores), `index.html` (textos) e `script.js` (link do
+   CTA, capacidade de SDR/Closer e valores padrão) para a realidade desse
+   cliente.
+
+## Subir na Vercel do cliente (conta dele, subdomínio dele)
+
+Rode o script `scripts/conectar-vercel-cliente.sh` — ele é um passo a passo
+interativo que te guia por cada tela (importar o repo na Vercel do cliente,
+liberar o GitHub App se precisar, e depois ligar o subdomínio dele com o
+registro de DNS certo):
+
+```bash
+bash scripts/conectar-vercel-cliente.sh
+```
 
 ## Subir na HostGator (ou qualquer hospedagem)
 
