@@ -95,10 +95,24 @@ GTM, é só deixar essas duas áreas em branco, elas não afetam a calculadora.
 
 ## Subir na Vercel do cliente (conta dele, subdomínio dele)
 
-Rode o script `scripts/conectar-vercel-cliente.sh` — ele é um passo a passo
-interativo que te guia por cada tela (importar o repo na Vercel do cliente,
-liberar o GitHub App se precisar, e depois ligar o subdomínio dele com o
-registro de DNS certo):
+Se a Vercel do cliente estiver ligada a uma organização do GitHub, o app da
+Vercel só enxerga repositórios que pertencem a essa própria organização —
+não repositórios externos onde alguém da organização é só colaborador. Se o
+repositório não aparecer na hora de importar, a solução é duplicar o
+repositório para dentro do GitHub do cliente antes de importar.
+
+Este repositório está espelhado em `github.com/operacional-maav/calculadora-growth-maav`
+(remote `maav`). Pra sincronizar atualizações depois de um `git push origin main`:
+
+```bash
+git push maav main
+```
+
+Depois disso (ou se o cliente já enxergar o repo original), rode o script
+`scripts/conectar-vercel-cliente.sh` — ele é um passo a passo interativo que
+te guia por cada tela (importar o repo na Vercel do cliente, liberar o
+GitHub App se precisar, e depois ligar o subdomínio dele com o registro de
+DNS certo):
 
 ```bash
 bash scripts/conectar-vercel-cliente.sh
